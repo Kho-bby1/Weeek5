@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -28,15 +25,9 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for windows - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return windows;
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -50,19 +41,47 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'YOUR-API-KEY',
-    appId: 'YOUR-APP-ID',
-    messagingSenderId: 'YOUR-SENDER-ID',
-    projectId: 'YOUR-PROJECT-ID',
-    storageBucket: 'YOUR-BUCKET',
+    apiKey: 'AIzaSyC_prZM2p7_tCh_n-8NU7-g_TDT2UYI3Hg',
+    appId: '1:761647282034:android:7ae7a71e22c72029998feb',
+    messagingSenderId: '761647282034',
+    projectId: 'weeeeeeek5',
+    storageBucket: 'weeeeeeek5.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'YOUR-API-KEY',
-    appId: 'YOUR-APP-ID',
-    messagingSenderId: 'YOUR-SENDER-ID',
-    projectId: 'YOUR-PROJECT-ID',
-    storageBucket: 'YOUR-BUCKET',
-    iosBundleId: 'com.example.week5Auth',
+    apiKey: 'AIzaSyB9sB89FkBfkhB5lZbdVm0pfErVEtR7RQo',
+    appId: '1:761647282034:ios:bc871714f5f92cab998feb',
+    messagingSenderId: '761647282034',
+    projectId: 'weeeeeeek5',
+    storageBucket: 'weeeeeeek5.firebasestorage.app',
+    iosBundleId: 'com.example.week5auth.week5Auth',
   );
+
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyAKyZUC0kv68ezt4spacjhaa9Yun7Z-wrI',
+    appId: '1:761647282034:web:40adfbb69a6fd52b998feb',
+    messagingSenderId: '761647282034',
+    projectId: 'weeeeeeek5',
+    authDomain: 'weeeeeeek5.firebaseapp.com',
+    storageBucket: 'weeeeeeek5.firebasestorage.app',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyB9sB89FkBfkhB5lZbdVm0pfErVEtR7RQo',
+    appId: '1:761647282034:ios:bc871714f5f92cab998feb',
+    messagingSenderId: '761647282034',
+    projectId: 'weeeeeeek5',
+    storageBucket: 'weeeeeeek5.firebasestorage.app',
+    iosBundleId: 'com.example.week5auth.week5Auth',
+  );
+
+  static const FirebaseOptions windows = FirebaseOptions(
+    apiKey: 'AIzaSyAKyZUC0kv68ezt4spacjhaa9Yun7Z-wrI',
+    appId: '1:761647282034:web:5c0b5f253cc8f8a4998feb',
+    messagingSenderId: '761647282034',
+    projectId: 'weeeeeeek5',
+    authDomain: 'weeeeeeek5.firebaseapp.com',
+    storageBucket: 'weeeeeeek5.firebasestorage.app',
+  );
+
 }

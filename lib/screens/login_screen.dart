@@ -68,8 +68,8 @@ class _LoginScreenState extends State<LoginScreen> {
         errorMessage = 'Wrong password provided.';
       } else if (e.code == 'invalid-email') {
         errorMessage = 'Invalid email format.';
-      } else if (e.code == 'user-disabled') {
-        errorMessage = 'This user account has been disabled.';
+      } else if (e.code == 'operation-not-allowed') {
+        errorMessage = 'Email/Password accounts are not enabled in Firebase Console.';
       } else {
         errorMessage = 'Login failed: ${e.message}';
       }

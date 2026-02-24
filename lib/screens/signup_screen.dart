@@ -62,7 +62,11 @@ class _SignupScreenState extends State<SignupScreen> {
       } else if (e.code == 'weak-password') {
         errorMessage = 'The password is too weak.';
       } else if (e.code == 'invalid-email') {
-        errorMessage = 'The email address is invalid.';
+        errorMessage = 'Invalid email format.';
+      } else if (e.code == 'user-disabled') {
+        errorMessage = 'This user account has been disabled.';
+      } else if (e.code == 'operation-not-allowed') {
+        errorMessage = 'Email/Password sign-in is not enabled in Firebase Console.';
       } else {
         errorMessage = 'Registration failed: ${e.message}';
       }
